@@ -19,8 +19,6 @@ public class PesquisaGoogle extends Navegador {
 	Diretor diretor = new Diretor("James Marsh", "30/04/1963");
 	Filme filme = new Filme("Teoria de tudo", 2014);
 	
-	boolean resultadoDiretor;
-	boolean resultadoFilme;
 	boolean[] statusCT = new boolean[2];
 	String msgDeErro;
 	
@@ -28,14 +26,8 @@ public class PesquisaGoogle extends Navegador {
 	public void pesquisaGoogle() throws Exception {
 		
 		try {
-			resultadoDiretor = rpDiretor.cadastrarDiretor(diretor);
-			resultadoFilme = rpFilme.cadastrarFilme(filme);
-			
-			if (resultadoDiretor && resultadoFilme) {
-				System.out.println("O Diretor " + diretor.getNome() + " e o Filme " +filme.getNome() +" foi cadastrado com sucesso !");
-			}else{
-				System.out.println("Ocorreu um erro ao tentar cadastrar o Diretor e o Filme !");
-			}
+			rpDiretor.cadastrarDiretor(diretor);
+			rpFilme.cadastrarFilme(filme);
 			
 			statusCT[0] = googlePage.realizarBuscaGoogle(diretor.getNome() +" "+filme.getNome());
 			statusCT[1] = googlePage.qtdResultadosAprox();

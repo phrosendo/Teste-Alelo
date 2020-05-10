@@ -8,12 +8,11 @@ public class RepositorioFilme implements IFilme {
 
 	List<Filme> listaDeFilmes = new ArrayList<Filme>();
 
-	public boolean cadastrarFilme(Filme filme) {
+	public void cadastrarFilme(Filme filme) throws Exception {
 		try {
 			listaDeFilmes.add(filme);
 		} catch (Exception e) {
-			return false;
+			throw new Exception("Ocorreu um erro ao tentar cadastrar um Filme !");
 		}
-		return true;
 	}
 }

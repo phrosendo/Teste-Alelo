@@ -4,5 +4,5 @@ import entidades.Filme;
 
 public interface IFilme {
 
-	public boolean cadastrarFilme(Filme filme);
+	public void cadastrarFilme(Filme filme) throws Exception;
 }
