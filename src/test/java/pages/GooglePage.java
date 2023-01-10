@@ -9,7 +9,7 @@ public class GooglePage extends Page {
 
 	public WebElement retrieveSearchInput() throws Exception  {
 		try {
-			return driver.findElement(By.name("qq"));
+			return driver.findElement(By.name("q"));
 		} catch (Exception e) {
 			throw new Exception("Não foi possível acessar o elemento do input de pesquisa do Google!");
 		}
@@ -29,7 +29,5 @@ public class GooglePage extends Page {
 		} catch (Exception e) {
 			throw new Exception("Não foi possível acessar o elemento dos resultados aproximados!");
 		}
-		
 	}
-
 }
