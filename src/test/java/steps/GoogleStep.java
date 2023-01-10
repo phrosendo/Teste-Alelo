@@ -13,7 +13,7 @@ public class GoogleStep extends Page {
 	boolean statusCT;
 
 	@Test
-	public void pesquisaGoogle() throws Exception {
+	public void googleTest() {
 
 		try {
 			googleFunctionality.googleSearch(Constants.NOME_DO_DIRETOR + " " + Constants.NOME_DO_FILME);
@@ -21,7 +21,7 @@ public class GoogleStep extends Page {
 			statusCT = true;
 		} catch (Exception e) {
 			statusCT = false;
-			System.err.println("ERRO: " + e.getMessage());
+			System.out.println("ERRO: " + e.getMessage());
 		}
 
 		Assert.assertEquals(true, statusCT);
