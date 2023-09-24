@@ -7,7 +7,7 @@ Este projeto tem como objetivo realizar uma pesquisa no Google pelo nome de um *
 
 - Ter o Eclipse instalado na máquina, caso não tenha acesso, clique [aqui](https://www.eclipse.org/downloads/) para realizar o download.
 
-- Ter o Google Chrome na versão **108.0.5359.125**.
+- Ter o Google Chrome na versão **117.0.5938.92**. Clique aqui [aqui](https://googlechromelabs.github.io/chrome-for-testing/#stable) para fazer o download.
 
 ## Para executar o software
 
